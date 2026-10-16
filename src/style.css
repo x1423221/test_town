@@ -1,0 +1,17 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* 鎖住整個視窗：手機上不能上下滑動、也不會有拉到底的回彈 */
+html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+body { position: fixed; inset: 0; width: 100%; }
+body {
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+  background: #1b2140;
+  color: #f3efe8;
+  -webkit-tap-highlight-color: transparent;
+  /* 手機長按不要跳出「複製／選取」選單，也不要選到文字 */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+button, canvas { -webkit-touch-callout: none; touch-action: manipulation; }
+/* 只有內容比螢幕還長時（例如管理面板打開）才在裡面捲動 */
+#app { height: 100%; overflow-y: auto; overscroll-behavior: none; }
