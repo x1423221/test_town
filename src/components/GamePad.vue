@@ -40,7 +40,8 @@ function up(e, dir) {
 <style scoped>
 .pad {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 8px 14px 4px; touch-action: none; user-select: none; -webkit-user-select: none;
+  margin-top: auto; /* 推到畫面最下面，跟遊戲畫面分開一點 */
+  padding: 4px 14px 8px; touch-action: none; user-select: none; -webkit-user-select: none;
 }
 /* 十字鍵：每顆 54px，彼此之間空 8px，比較不會誤按 */
 .dpad { position: relative; width: 178px; height: 178px; }

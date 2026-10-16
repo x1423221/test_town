@@ -111,9 +111,9 @@ function fmtNow() {
 </template>
 
 <style scoped>
-.page { position: relative; max-width: 480px; margin: 0 auto; padding: 10px 12px 12px; }
+.page { position: relative; max-width: 480px; margin: 0 auto; padding: 6px 8px 8px; }
 .restart-btn {
-  position: absolute; top: 10px; right: 12px; z-index: 5; font: inherit; font-size: 12px; padding: 3px 8px;
+  position: absolute; top: 5px; right: 8px; z-index: 5; font: inherit; font-size: 12px; padding: 3px 8px;
   background: transparent; color: #a8b0d8; border: 1px solid #4a5280; border-radius: 4px; cursor: pointer;
 }
 .confirm { position: fixed; inset: 0; z-index: 50; background: rgba(10, 12, 28, 0.7); display: grid; place-items: center; padding: 24px; }

@@ -608,11 +608,15 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.console { max-width: 420px; margin: 0 auto; user-select: none; -webkit-user-select: none; touch-action: none; } /* 在遊戲上滑手指不會捲動頁面 */
-.title { font-size: 16px; text-align: center; letter-spacing: 2px; margin-bottom: 8px; }
+/* 整個遊戲剛好一個螢幕高：標題、畫面在上面，按鈕固定在最下面；在遊戲上滑手指不會捲動頁面 */
+.console {
+  max-width: 440px; margin: 0 auto; user-select: none; -webkit-user-select: none; touch-action: none;
+  display: flex; flex-direction: column; height: calc(100vh - 14px); height: calc(100dvh - 14px);
+}
+.title { font-size: 15px; line-height: 18px; text-align: center; letter-spacing: 2px; margin-bottom: 4px; }
 .screen {
-  /* 畫面寬度依螢幕高度縮小，讓下面的按鈕一定看得到（扣掉標題、按鈕、上下留白約 265px） */
-  width: min(100%, calc((100vh - 265px) * 192 / 264)); width: min(100%, calc((100dvh - 265px) * 192 / 264)); margin: 0 auto;
+  /* 畫面能多大就多大，但要留位置給按鈕：扣掉上下留白 14、標題 22、邊框 8、按鈕 190、畫面和按鈕之間至少 8，共 242px */
+  width: min(100%, calc((100vh - 242px) * 192 / 264)); width: min(100%, calc((100dvh - 242px) * 192 / 264)); margin: 0 auto; flex: none;
   position: relative; border: 4px solid #f3efe8; background: #000; touch-action: none; overflow: hidden; }
 .game { display: block; width: 100%; aspect-ratio: 192 / 264; image-rendering: pixelated; }
 /* 對話框固定在畫面上方：主角走在下面的路上，不會被擋住 */
